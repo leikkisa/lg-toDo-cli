@@ -1,7 +1,6 @@
-# toDo-cli
-Command Line To Do List with Callbacks
-
+# To Do List Command Line Interface
 Learners Guild Phase 2 Exercise
+Command Line To Do List with Callbacks
 
 To add tasks:
 ```
