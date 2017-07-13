@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 'use strict'
-const fs = require('fs')
-const rw = require('./readWrite')
+import fs from 'fs'
+import { readToDoList, writeToDoList } from './readWrite'
 
 exports.add = function(task, cb){
-  rw.readToDoList((err, toDoList) => {
+  readToDoList((err, toDoList) => {
     if (err) throw new Error (err)
     const newTask = {
       id: toDoList.length + 1,
@@ -12,14 +12,14 @@ exports.add = function(task, cb){
       status: 'to do',
     }
     toDoList.push(newTask)
-    rw.writeToDoList(toDoList)
+    writeToDoList(toDoList)
     const output = "Created task '" + newTask.task + "'."
     cb(output)
   })
 }
 
 exports.list = function(cb) {
-  rw.readToDoList((err, toDoList) => {
+  readToDoList((err, toDoList) => {
     if (err) throw new Error (err)
     let printout = [
       ' ID   Description ',
@@ -42,11 +42,11 @@ exports.list = function(cb) {
 }
 
 exports.done = function (id, cb) {
-  rw.readToDoList((err, toDoList) => {
+  readToDoList((err, toDoList) => {
     if (err) throw new Error (err)
     const index = toDoList.findIndex((item => item.id == id));
     toDoList[index].status = 'did it'
-    rw.writeToDoList(toDoList)
+    writeToDoList(toDoList)
     const output = 'Completed the task ' + toDoList[index].task
     cb(output)
   })
