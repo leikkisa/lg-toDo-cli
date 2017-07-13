@@ -1,0 +1,22 @@
+{
+  "name": "cmdlinetodo",
+  "version": "1.0.0",
+  "description": "Command Line Interface for a To Do List",
+  "main": "task.js",
+  "scripts": {
+    "test": "mocha --compilers js:babel-register ./test.js"
+  },
+  "keywords": [
+    "CLI",
+    "ToDo"
+  ],
+  "author": "Sally Maki",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-register": "^6.24.1",
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2"
+  }
+}
