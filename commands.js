@@ -13,7 +13,7 @@ exports.add = function(task, cb){
     }
     toDoList.push(newTask)
     writeToDoList(toDoList)
-    const output = "Created task '" + newTask.task + "'."
+    const output = "Created task " + newTask.id + " '" + newTask.task + "'."
     cb(output)
   })
 }
