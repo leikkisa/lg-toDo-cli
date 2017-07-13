@@ -4,7 +4,8 @@
   "description": "Command Line Interface for a To Do List",
   "main": "task.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-register ./test.js"
+    "test": "mocha --compilers js:babel-register ./test.js",
+    "build": "babel src -d dist"
   },
   "keywords": [
     "CLI",

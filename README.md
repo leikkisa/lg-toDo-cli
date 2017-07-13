@@ -29,7 +29,7 @@ $ node task.js list
   3   Shoot for the moon
   4   Eat some mac n cheese
 
-  4 tasks.
+4 tasks.
 ```
 To complete a task:
 ```
@@ -46,5 +46,5 @@ $ node task.js list
   2   Say hello to the world
   4   Eat some mac n cheese
 
-  2 tasks.
+2 tasks.
 ```
