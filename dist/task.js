@@ -14,9 +14,9 @@ switch (command) {
   case 'list':
     (0, _commands.list)(console.log);
     break;
-  case 'done':
-    (0, _commands.done)(commandInput, console.log);
+  case 'complete':
+    (0, _commands.complete)(commandInput, console.log);
     break;
   default:
-    console.log('Please enter a valid command:\n' + 'add ["my task"]\n' + 'list\n' + 'done [task id]');
+    console.log('Please enter a valid command:\n' + 'add ["my task"]\n' + 'list\n' + 'complete [task id]');
 }

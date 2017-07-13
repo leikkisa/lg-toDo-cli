@@ -58,12 +58,12 @@ describe('Command Line To Do CLI', function () {
 
   describe('complete to do', function () {
     it('done function is a function', function () {
-      (0, _chai.expect)(_commands.done).to.be.a('function');
+      (0, _chai.expect)(_commands.complete).to.be.a('function');
     });
-    it('done updates a task status to "did it"', function (done2) {
-      (0, _commands.done)(1, function (output) {
+    it('done updates a task status to "did it"', function (done) {
+      (0, _commands.complete)(1, function (output) {
         (0, _chai.expect)(output).to.match(/milk/);
-        done2();
+        done();
       });
     });
   });

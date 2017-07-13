@@ -40,7 +40,7 @@ export function list (cb) {
   })
 }
 
-export function done (id, cb) {
+export function complete (id, cb) {
   readToDoList((err, toDoList) => {
     if (err) throw new Error (err)
     const index = toDoList.findIndex((item => item.id == id))

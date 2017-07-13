@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.add = add;
 exports.list = list;
-exports.done = done;
+exports.complete = complete;
 
 var _fs = require('fs');
 
@@ -48,7 +48,7 @@ function list(cb) {
   });
 }
 
-function done(id, cb) {
+function complete(id, cb) {
   (0, _readWrite.readToDoList)(function (err, toDoList) {
     if (err) throw new Error(err);
     var index = toDoList.findIndex(function (item) {

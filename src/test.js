@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict'
 import { expect }  from 'chai'
-import { add, list, done } from './commands'
+import { add, list, complete } from './commands'
 import { readToDoList, writeToDoList } from './readWrite'
 
 describe('Command Line To Do CLI', function() {
@@ -66,12 +66,12 @@ describe('Command Line To Do CLI', function() {
 
   describe('complete to do', () => {
     it('done function is a function', () => {
-      expect(done).to.be.a('function')
+      expect(complete).to.be.a('function')
     })
-    it('done updates a task status to "did it"', (done2) => {
-      done(1, (output) => {
+    it('done updates a task status to "did it"', (done) => {
+      complete(1, (output) => {
         expect(output).to.match(/milk/)
-        done2()
+        done()
       })
     })
   })
