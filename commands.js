@@ -34,9 +34,8 @@ exports.list = function(cb) {
         + item.id + '   ' + item.task)
       }
     })
-    const output = 'hello'
-    // const output = printout.join('\n') +
-    // '  \n\n' + countToDos + ' task(s).'
+    const output = printout.join('\n') +
+    '  \n\n' + countToDos + ' task(s).'
     cb && cb(output)
   })
 }
