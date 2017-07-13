@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict'
-import fs from 'fs'
-import toDoFile from './tasks.json'
+const fs = require('fs')
+const toDoFile = './tasks.json'
 
 function readToDoList (cb) {
   fs.readFile(toDoFile, (err, data) => {
