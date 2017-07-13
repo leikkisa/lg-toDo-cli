@@ -7,6 +7,10 @@
     "test": "mocha --compilers js:babel-register ./dist/test.js",
     "build": "babel src -d dist"
   },
+  "repository": {
+  "type": "git",
+  "url": "git+https://github.com/leikkisa/lg-toDo-cli.git"
+  },
   "keywords": [
     "CLI",
     "ToDo"
